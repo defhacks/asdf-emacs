@@ -43,7 +43,7 @@ download_release() {
   filename="$2"
 
   # TODO: Adapt the release URL convention for emacs
-  url="$GH_REPO/archive/refs/tags/emacs-${version}.zip"
+  url="$GH_REPO/archive/refs/tags/emacs-${version}.tar.gz"
 
   echo "* Downloading $TOOL_NAME release $version..."
   curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
